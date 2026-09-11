@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#173b35" />
+  <meta name="description" content="Therapeutic massage in Wellington's CBD. Restore your body, reset your mind." />
+  <title>Manners Street Therapeutic Massage | Wellington</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink:#173b35; --ink-2:#28584d; --cream:#f7f4ed; --sand:#e9dfcf; --gold:#bb8e55; --muted:#64716c; --white:#fffdf8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:'DM Sans',sans-serif; font-size:16px; line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    .topbar { padding:9px 6vw; background:var(--ink); color:#f8f2e8; display:flex; justify-content:space-between; font-size:13px; letter-spacing:.02em; }
+    header { padding:22px 6vw; display:flex; align-items:center; justify-content:space-between; background:var(--cream); position:relative; z-index:2; }
+    .brand { display:flex; gap:12px; align-items:center; font-weight:700; letter-spacing:.04em; line-height:1.1; }
+    .mark { width:34px; height:34px; border:1px solid var(--gold); border-radius:50%; display:grid; place-items:center; color:var(--gold); font-family:serif; font-size:20px; }
+    nav { display:flex; gap:30px; font-size:14px; color:var(--ink-2); }
+    .nav-cta, .button { display:inline-flex; align-items:center; justify-content:center; background:var(--ink); color:white; padding:13px 21px; border-radius:99px; font-weight:600; font-size:14px; transition:.2s; }
+    .nav-cta:hover,.button:hover { background:var(--gold); transform:translateY(-1px); }
+    .hero { min-height:630px; padding:75px 6vw 95px; display:grid; grid-template-columns:1.05fr .95fr; align-items:center; gap:7vw; overflow:hidden; }
+    .eyebrow { color:var(--gold); font-size:12px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; }
+    h1,h2 { font-family:'Playfair Display',serif; font-weight:500; line-height:1.05; margin:16px 0 22px; }
+    h1 { font-size:clamp(48px,6.2vw,88px); letter-spacing:-.045em; max-width:680px; }
+    h2 { font-size:clamp(36px,4vw,58px); letter-spacing:-.035em; }
+    .hero p { color:var(--muted); font-size:19px; max-width:500px; margin-bottom:32px; }
+    .hero-actions { display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+    .text-link { color:var(--ink); padding:12px 10px; font-size:14px; font-weight:600; }
+    .visual { min-height:470px; background:linear-gradient(145deg,rgba(23,59,53,.12),rgba(187,142,85,.2)), url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=85') center/cover; border-radius:220px 220px 18px 18px; position:relative; }
+    .visual:after { content:'restore · reset · renew'; position:absolute; bottom:25px; right:-29px; background:var(--white); padding:14px 17px; color:var(--gold); font-size:12px; letter-spacing:.1em; transform:rotate(-90deg); transform-origin:right bottom; }
+    .strip { background:var(--sand); padding:23px 6vw; display:flex; gap:42px; justify-content:center; flex-wrap:wrap; font-size:14px; color:var(--ink-2); }
+    .strip span:before { content:'✦'; color:var(--gold); margin-right:10px; }
+    section { padding:105px 6vw; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:45px; }
+    .section-head h2 { max-width:520px; margin-bottom:0; }
+    .section-head p { color:var(--muted); max-width:360px; margin:0; }
+    .services { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { background:var(--white); padding:31px; min-height:260px; border:1px solid rgba(23,59,53,.1); display:flex; flex-direction:column; justify-content:space-between; }
+    .card h3 { font-family:'Playfair Display',serif; font-size:29px; font-weight:500; margin:12px 0 8px; }
+    .card p { color:var(--muted); margin:0; font-size:15px; }
+    .price { color:var(--gold); font-size:14px; font-weight:700; }
+    .about { background:var(--ink); color:#f8f2e8; display:grid; grid-template-columns:1fr 1fr; gap:9vw; align-items:center; }
+    .about h2 { color:#f8f2e8; }
+    .about p { color:#cbd5cf; max-width:530px; }
+    .about .button { background:var(--gold); }
+    .quote { border-left:1px solid var(--gold); padding-left:30px; margin-top:28px; font-family:'Playfair Display',serif; font-size:25px; line-height:1.35; color:#e8dfcf; }
+    .contact { display:grid; grid-template-columns:1fr 1fr; gap:8vw; align-items:start; }
+    .details { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:35px; }
+    .detail-label { font-size:12px; text-transform:uppercase; letter-spacing:.13em; color:var(--gold); font-weight:700; }
+    .detail-value { margin-top:7px; color:var(--ink-2); }
+    .map { min-height:345px; background:var(--sand); padding:30px; position:relative; overflow:hidden; }
+    .map:before,.map:after { content:''; position:absolute; background:rgba(23,59,53,.14); height:1px; width:150%; transform:rotate(28deg); top:45%; left:-20%; }
+    .map:after { transform:rotate(-18deg); top:62%; }
+    .map-card { position:absolute; background:var(--white); padding:23px; left:30px; bottom:30px; box-shadow:0 10px 30px rgba(23,59,53,.12); max-width:290px; }
+    .map-card strong { display:block; font-family:'Playfair Display',serif; font-size:24px; font-weight:500; }
+    footer { padding:30px 6vw; border-top:1px solid rgba(23,59,53,.12); display:flex; justify-content:space-between; color:var(--muted); font-size:13px; }
+    @media(max-width:800px){ .topbar{justify-content:center}.topbar span:first-child{display:none} header{padding:18px 5vw}.brand{font-size:13px} nav{display:none}.hero{grid-template-columns:1fr;padding:55px 5vw 70px;gap:42px}.hero p{font-size:17px}.visual{min-height:330px;border-radius:150px 150px 16px 16px}.visual:after{right:-12px}.strip{justify-content:flex-start;padding:20px 5vw;gap:11px 25px}.strip span{font-size:13px}section{padding:75px 5vw}.section-head{display:block}.section-head p{margin-top:18px}.services,.about,.contact{grid-template-columns:1fr}.about{gap:35px}.details{gap:22px 12px}.map{min-height:300px}footer{padding:25px 5vw;display:block}footer span{display:block;margin-top:7px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><span>WELLINGTON CBD · MANNERS STREET</span><span>Open daily · 10:00 am – 8:30 pm</span></div>
+  <header><a href="#top" class="brand"><span class="mark">M</span><span>MANNERS STREET<br/>THERAPEUTIC MASSAGE</span></a><nav><a href="#services">Treatments</a><a href="#story">Our approach</a><a href="#contact">Find us</a></nav><a class="nav-cta" href="tel:044712628">Call to book</a></header>
+  <main id="top">
+    <section class="hero"><div><div class="eyebrow">Therapeutic massage · Wellington</div><h1>Feel at home in your body.</h1><p>Thoughtful, restorative massage in the heart of Wellington. A quiet hour to release tension, move freely and come back to yourself.</p><div class="hero-actions"><a class="button" href="tel:044712628">Book your treatment</a><a class="text-link" href="#services">Explore treatments →</a></div></div><div class="visual" role="img" aria-label="A calm massage room"></div></section>
+    <div class="strip"><span>Qualified therapists</span><span>Central Wellington location</span><span>Walk-ins welcome</span></div>
+    <section id="services"><div class="section-head"><h2>Care that meets you where you are.</h2><p>From a targeted reset to a full-body unwind, choose the treatment that feels right today.</p></div><div class="services"><article class="card"><div><div class="eyebrow">01 · Targeted</div><h3>Therapeutic Massage</h3><p>Focused, considered work for tight muscles, everyday aches and areas that need extra attention.</p></div><div class="price">60 / 90 MIN · ENQUIRE FOR PRICE</div></article><article class="card"><div><div class="eyebrow">02 · Restorative</div><h3>Relaxation Massage</h3><p>Slow, flowing movements to soothe a busy mind and leave your whole body feeling lighter.</p></div><div class="price">60 / 90 MIN · ENQUIRE FOR PRICE</div></article><article class="card"><div><div class="eyebrow">03 · Tailored</div><h3>Remedial Focus</h3><p>A personalised session shaped around your body, your movement and what you need most.</p></div><div class="price">BY CONSULTATION</div></article></div></section>
+    <section class="about" id="story"><div><div class="eyebrow">A calmer kind of care</div><h2>Make space for feeling better.</h2><p>We believe massage should feel both effective and unhurried. Every session begins with a conversation, so your treatment can be tailored to your body and your day.</p><a class="button" href="tel:044712628">Talk to our team</a></div><div class="quote">“Leave the city behind for a little while. Your body will notice the difference.”</div></section>
+    <section class="contact" id="contact"><div><div class="eyebrow">Visit us</div><h2>Right in the centre of it all.</h2><p>Find a moment of calm above Manners Street, Te Aro. We are easy to reach from the CBD, Cuba Street and Courtenay Place.</p><div class="details"><div><div class="detail-label">Address</div><div class="detail-value">Level 1, 96 Manners Street<br/>Te Aro, Wellington 6011</div></div><div><div class="detail-label">Call</div><div class="detail-value"><a href="tel:044712628">04 471 2628</a></div></div><div><div class="detail-label">Hours</div><div class="detail-value">Monday – Sunday<br/>10:00 am – 8:30 pm</div></div><div><div class="detail-label">Appointments</div><div class="detail-value">Bookings recommended<br/>Walk-ins welcome</div></div></div></div><div class="map"><div class="map-card"><strong>Manners Street</strong><span>Level 1 · 96 Manners Street</span><br/><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=96+Manners+Street+Wellington" target="_blank" rel="noreferrer">Open in Maps ↗</a></div></div></section>
+  </main>
+  <footer><span>© 2026 Manners Street Therapeutic Massage</span><span>Wellington, New Zealand · <a href="tel:044712628">04 471 2628</a></span></footer>
+</body>
+</html>
